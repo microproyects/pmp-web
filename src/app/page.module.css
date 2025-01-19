@@ -108,61 +108,6 @@ a.secondary {
   flex-shrink: 0;
 }
 
-.navbar {
-  width: 100%;
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 10px 20px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: all 0.3s;
-  background: rgba(255, 255, 255, 0.1);
-  position: relative;
-  overflow: hidden;
-}
-
-.navbar a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg,
-      transparent,
-      rgba(255, 255, 255, 0.2),
-      transparent);
-  transition: 0.5s;
-}
-
-.navbar a:hover::before {
-  left: 100%;
-}
-
-.navbar a:hover {
-  background: rgba(83, 83, 255, 0.2);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(83, 83, 255, 0.2);
-}
-
-.navbar a svg {
-  width: 22px;
-  height: 22px;
-}
 
 .menu {
   flex: 1;
@@ -170,8 +115,8 @@ a.secondary {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 800px;
-  padding: 40px 20px;
+  max-width: 600px;
+
 }
 
 .menu form {
@@ -187,8 +132,8 @@ a.secondary {
 
 .menu h2 {
   margin-bottom: 30px;
-  font-size: 4rem;
-  background: linear-gradient(45deg, #fff, #ad306b);
+  font-size: 2rem;
+  background: linear-gradient(45deg, #fff, #3f3138);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -277,18 +222,19 @@ a.secondary {
   transition: all 0.3s ease;
   color: #fff;
   text-shadow: 0 0 10px rgba(167, 147, 167, 0.8),
-      0 0 20px rgba(255, 255, 255, 0.4);
+    0 0 20px rgba(255, 255, 255, 0.4);
   font-weight: bold;
 }
-.h1{
+
+.h1 {
   font-size: 2.8rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #fff, #504141);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
-            letter-spacing: 2px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #fff, #504141);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+  letter-spacing: 2px;
 }
 
 /* Enable hover only on non-touch devices */
