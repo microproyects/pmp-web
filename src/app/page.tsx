@@ -10,24 +10,24 @@
             const changingText = document.getElementById('changingText');
             let currentIndex = 0;
             function changeText () {
-                changingText.style.opacity = '0';
-                changingText.style.transition = 'all 0.3s ease';
-                changingText.style.transform = 'translateY(10px)';
-                setTimeout(() => {
+                if (changingText){   
+                    changingText.style.opacity = '0';
+                    changingText.style.transform = 'translateY(10px)';
+                    setTimeout(() => {
                     changingText.textContent = words[currentIndex];
                     changingText.style.opacity = '1';
                     
                     changingText.style.transform = 'translateY(0)';
-                    changingText.style.transition = 'all 0.3s ease';
                     currentIndex = (currentIndex + 1) % words.length;
-                }, 200);
+                }, 250);}
             }
-            setInterval(changeText, 1000);
+            const intervalID = setInterval(changeText, 2000);
+            return () => clearInterval(intervalID);
     });
             return (
                 <div className={styles.page}>
                     <header>
-                        <h1>PMP <span  id="changingText">Papu</span></h1>
+                        <h1 className={styles.h1}>PMP <span className={styles.changingText} id="changingText"></span></h1>
                         <nav className={styles.navbar}>
                             <a href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"  
