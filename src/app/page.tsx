@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./page.module.css";
+import Bola from "./components/Bola";
 import React, { useEffect, useRef } from "react";
 
 export default function Home() {
@@ -24,19 +25,23 @@ export default function Home() {
         }
         const intervalID = setInterval(changeText, 2000);
         return () => clearInterval(intervalID);
+
+
+
+
     });
     const userRef = useRef<HTMLInputElement>(null); 
     const passRef = useRef<HTMLInputElement>(null); 
     const exitnavg = () => {
-        // Verifica que las referencias no sean nulas antes de acceder a sus valores
+   
         if (userRef.current && passRef.current) {
-            const user = userRef.current.value; // Obtiene el valor del campo de usuario
-            const pass = passRef.current.value; // Obtiene el valor del campo de contraseña
+            const user = userRef.current.value; 
+            const pass = passRef.current.value; 
 
             if (user === "admin" && pass === "pmp-web") {
                 window.location.href = './home'; // Redirige a la página de inicio
             } else {
-                alert("Credenciales incorrectas"); // Muestra un mensaje de error
+                alert("Credenciales incorrectas"); 
             }
         } else {
             console.error("Los elementos de entrada no se encontraron en el DOM.");
@@ -46,9 +51,9 @@ export default function Home() {
         <div className={styles.page}>
             <header>
                 <h1 className={styles.h1}>PMP <span className={styles.changingText} id="changingText"></span></h1>
-
             </header>
             <main className={styles.main}>
+                <Bola />
                 <div className={styles.menu}>
                     <form onSubmit={(e) => { e.preventDefault(); exitnavg(); }}>
                         <h2>Iniciar Sesión</h2>
@@ -69,6 +74,7 @@ export default function Home() {
                             <input  ref={passRef} id="pass" type="password" placeholder="Contraseña" required />
                         </div>
                         <button type="submit">Entrar</button>
+                        
                     </form>
                 </div>
             </main>
