@@ -8,6 +8,7 @@ class Bola {
     dirX: number;
     dirY: number;
     velocidad: number;
+    color: string;
 
     constructor(x: number, y: number) {
         this.x = x;
@@ -16,12 +17,16 @@ class Bola {
         this.dirX = (Math.random() * 2) - 1; // Dirección aleatoria en X
         this.dirY = (Math.random() * 2) - 1; // Dirección aleatoria en Y
         this.velocidad = 5;
+
+        this.color = `white`;
     }
 
     dibujar(ctx: CanvasRenderingContext2D) {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radio, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
         ctx.fill();
+        ctx.stroke();   
         ctx.closePath();
     }
 
@@ -62,7 +67,6 @@ const CanvasComponent: React.FC = () => {
 
         function animar() {
             if (!canvas || !ctx) return; // Verifica que canvas y ctx no sean null
-
             ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpia el canvas
 
             bolas.forEach(bola => {
@@ -76,12 +80,11 @@ const CanvasComponent: React.FC = () => {
                     const dx = bolas[j].x - bolas[i].x;
                     const dy = bolas[j].y - bolas[i].y;
                     const dist = Math.sqrt(dx ** 2 + dy ** 2);
-
-                    if (dist < 300) { // Cambia este valor para ajustar la distancia de conexión
+                    if (dist < 160) { // Cambia este valor para ajustar la distancia de conexión
                         ctx.beginPath();
                         ctx.moveTo(bolas[i].x, bolas[i].y);
                         ctx.lineTo(bolas[j].x, bolas[j].y);
-                        ctx.strokeStyle = 'rgba(0, 0, 0, 0.5)'; // Color de la línea
+                        ctx.strokeStyle = 'rgba(202, 202, 202, 0.63)'; // Color de la línea
                         ctx.stroke();
                         ctx.closePath();
                     }

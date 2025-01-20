@@ -134,7 +134,7 @@ a.secondary {
 .menu h2 {
   margin-bottom: 30px;
   font-size: 2rem;
-  background: linear-gradient(45deg, #fff, #3f3138);
+  background: linear-gradient(45deg, #fff, #ffffff);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
