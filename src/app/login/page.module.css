@@ -238,18 +238,6 @@ a.secondary {
 }
 
 
-.canvasbold {
-  position: absolute;
-  /* Posiciona el canvas de forma absoluta */
-  top: 0;
-  left: 0;
-  width: 100%;
-  /* Asegúrate de que el canvas ocupe todo el ancho */
-  height: 100%;
-  /* Asegúrate de que el canvas ocupe toda la altura */
-  /* Coloca el canvas detrás del formulario */
-}
-
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {

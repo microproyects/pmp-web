@@ -1,4 +1,32 @@
-
-body{
-    background-color: black;
+.h1 {
+    text-align: center;
+    color: rgb(250, 246, 248);
+    font-size: max(6em, 1%);    
+    animation: animationIn 2s ease forwards;
 }
+
+.all {
+    position: relative;
+    min-height: 100svh;
+    padding: 80px;
+}
+
+.hovertext{
+    text-shadow: -1px 1px 12px rgb(255, 255, 255);
+}
+.containerPCvs{
+    gap: 32px;
+    padding: 24px;      
+    display: grid;      
+    grid-template-columns: 1fr 1fr 1fr;
+}
+@keyframes animationIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}   

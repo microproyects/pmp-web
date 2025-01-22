@@ -30,18 +30,18 @@ export default function Home() {
 
 
     }, []);
-    const userRef = useRef<HTMLInputElement>(null); 
-    const passRef = useRef<HTMLInputElement>(null); 
+    const userRef = useRef<HTMLInputElement>(null);
+    const passRef = useRef<HTMLInputElement>(null);
     const exitnavg = () => {
-   
+
         if (userRef.current && passRef.current) {
-            const user = userRef.current.value; 
-            const pass = passRef.current.value; 
+            const user = userRef.current.value;
+            const pass = passRef.current.value;
 
             if (user === "admin" && pass === "pmp-web") {
-                window.location.href = '/home'; 
+                window.location.href = '/home';
             } else {
-                alert("Credenciales incorrectas"); 
+                alert("Credenciales incorrectas");
             }
         } else {
             console.error("Los elementos de entrada no se encontraron en el DOM.");
@@ -71,10 +71,10 @@ export default function Home() {
                                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                                 <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                             </svg>
-                            <input  ref={passRef} id="pass" type="password" placeholder="Contraseña" required />
+                            <input ref={passRef} id="pass" type="password" placeholder="Contraseña" required />
                         </div>
                         <button type="submit">Entrar</button>
-                        
+
                     </form>
                 </div>
             </main>

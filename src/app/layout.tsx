@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IconQuestionMark } from '@tabler/icons-react';
+import { IconUsers } from '@tabler/icons-react';
 import { IconBrandAndroid } from '@tabler/icons-react';
 import { Geist, Geist_Mono } from "next/font/google";
 import   "./globals.css";
@@ -32,9 +33,9 @@ export default function RootLayout({
                             <IconBrandAndroid stroke={2} />
                                 TaskHub
                             </a>
-                            <a href="/home.tsx">
-                            <IconQuestionMark stroke={2} />
-                                Undefined
+                            <a href="/contact">
+                            <IconUsers stroke={2} />
+                                Personal
                             </a>
                             <a href="#">
                             <IconQuestionMark stroke={2} />
