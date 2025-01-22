@@ -128,7 +128,6 @@ a.secondary {
   border: 2px solid rgba(255, 255, 255, 0.3);
   text-align: center;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  animation: formGlow 3s infinite alternate;
 }
 
 .menu h2 {
