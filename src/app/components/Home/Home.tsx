@@ -20,7 +20,7 @@ const Home: React.FC<HomeProps> = ({ text, alt, src, width, height, title, text2
             <div className="containercontent">
                 <div className="containerimg">
                     <Image
-                    className="img"
+                        className="img"
                         alt={alt}
                         src={src}
                         width={width}
@@ -28,12 +28,12 @@ const Home: React.FC<HomeProps> = ({ text, alt, src, width, height, title, text2
                     />
                 </div>
                 <h2 className="htext">{title}</h2>
-                <p>{text}</p>
+                <p className="text">{text}</p>
             </div>
             <div className="containercontent">
                 <div className="containerimg">
                     <Image
-                    className="img"
+                        className="img"
                         alt={alt2}
                         src={src2}
                         width={width2}
@@ -41,7 +41,7 @@ const Home: React.FC<HomeProps> = ({ text, alt, src, width, height, title, text2
                     />
                 </div>
                 <h2 className="htext">{title2}</h2>
-                <p>{text2}</p>
+                <p className="text">{text2}</p>
             </div>
         </section>
     );
