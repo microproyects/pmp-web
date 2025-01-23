@@ -1,5 +1,5 @@
     import React, { useEffect, useRef } from 'react';
-    import styles from "../login/page.module.css";
+    import styles from "../../login/page.module.css";
 
     class Bola {
         x: number;

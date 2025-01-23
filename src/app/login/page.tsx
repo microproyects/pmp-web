@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./page.module.css";
-import Bola from "../components/Bola";
+import Bola from "../components/Bola/Bola";
 import React, { useEffect, useRef } from "react";
 
 export default function Home() {
